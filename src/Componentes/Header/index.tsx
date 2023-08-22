@@ -10,15 +10,19 @@ import {
   MenuList,
 } from "@chakra-ui/react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <Box>
       <Flex justify="center" p={4} color="white">
         <Flex align="center">
-          <Heading as="h1" size="lg">
-            Convert
-          </Heading>
+          <Link to="/">
+            {" "}
+            <Heading as="h1" size="lg">
+              Convert
+            </Heading>
+          </Link>
         </Flex>
       </Flex>
       <Flex gap={6}>
@@ -27,16 +31,15 @@ const Header = () => {
             Comprimento, Área e Volume
           </MenuButton>
           <MenuList>
-            <MenuItem>Centímetros</MenuItem>
-            <MenuItem>Metros</MenuItem>
-            <MenuItem>Quilômetros</MenuItem>
-            <MenuItem>Polegadas</MenuItem>
-            <MenuItem>Hectares</MenuItem>
-            <MenuItem>Litros</MenuItem>
-            <MenuItem>Mililitros</MenuItem>
-            <MenuItem>Pés Cúbicos</MenuItem>
-            <MenuItem>Metros Cúbicos</MenuItem>
-            <MenuItem>Galões</MenuItem>
+            <Link to="/comprimento">
+              <MenuItem>Comprimento</MenuItem>
+            </Link>
+            <Link to="/area">
+              <MenuItem>Área</MenuItem>
+            </Link>
+            <Link to="/volume">
+              <MenuItem>Volume</MenuItem>
+            </Link>
           </MenuList>
         </Menu>
 
